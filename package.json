@@ -1,0 +1,30 @@
+{
+  "name": "transistors",
+  "version": "1.0.0",
+  "description": "An app to calculate resistors and currents of a transistors",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "TransistorsCalculator",
+    "productName": "TransistorsCalculator",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": null,
+    "win":{
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^21.2.0",
+    "electron": "^6.0.9",
+    "lodash": "^4.17.15",
+    "vue": "^2.6.10"
+  }
+}

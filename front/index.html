@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <title>Transistors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+  <script src="https://vuejs.org/js/vue.js"></script>
+</head>
+
+<body class="p-3 mb-2 bg-dark text-white">
+  <div id='app'>
+    <div id="center">
+      <h2 class='text-danger'>β: <input class="text-white" type="number" v-model='gain'></h2>
+    </div>
+    <small class='text-danger'>VBE: <input class="text-white" type="number" v-model='VBE'></small>
+    <table class="table table-bordered text-dark bg-white" id='table'>
+      <thead>
+        <tr>
+          <th scope="col">Currents</th>
+          <th scope="col">Resistors</th>
+          <th scope="col">Volts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Ic: <input type="number" v-model="Ic"><select v-model='selectIc'>
+              <option value="-3">mA</option>
+              <option value="-6">μA</option>
+              <option value="1">A</option>
+            </select></th>
+          <th scope="row">Rc: <input type="number" v-model="Rc"><select v-model='selectRc'>
+              <option value="3">KΩ</option>
+              <option value="1">Ω</option>
+            </select></th>
+          <th scope="row">Vcc: <input type="number" v-model="Vcc"></th>
+        </tr>
+        <tr>
+          <th scope="row">Ib: <input type="number" v-model="Ib"></th>
+          <th scope="row">Rb: <input type="number" v-model="Rb"><select v-model='selectRb'>
+              <option value="3">KΩ</option>
+              <option value="1">Ω</option>
+            </select></th>
+          <th scope="row">VCE: <input type="number" v-model="VCE"></th>
+        </tr>
+        <tr>
+          <th scope="row">Ie: <input type="number" v-model="Ic"></th>
+          <th scope="row">Re: <input type="number" v-model="Re"><select v-model='selectRe'>
+              <option value="3">KΩ</option>
+              <option value="1">Ω</option>
+            </select></th>
+          <th scope="row">VCB: <input type="number"></th>
+        </tr>
+      </tbody>
+    </table>
+    <button class='btn btn-danger mt-4' @click='calculate'>Calculate</button>
+    <table class="table table-bordered bg-white" id='table'>
+      <thead>
+        <tr>
+          <th scope="col">Currents</th>
+          <th scope="col">Resisotrs</th>
+          <th scope="col">Volts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row"><strong>Ic: </strong>{{currentIc}}</td>
+          <td scope="row"><strong>Rc: </strong>{{newRc}}</td>
+          <td scope="row"><strong>VCE: </strong>{{VCE}}</td>
+        </tr>
+        <tr>
+          <td scope="row"><strong>Ib: </strong>{{currentIb}}</td>
+          <td scope="row"><strong>Rb: </strong>{{newRb}}</td>
+          <td scope="row"><strong>VCB: </strong>{{VCB}}</td>
+        </tr>
+        <tr>
+          <td scope="row"><strong>Ie: </strong>{{currentIc}}</td>
+          <td scope="row"><strong>Re: </strong>{{newRe}}</td>
+          <td scope="row"><strong>VBE: </strong>{{VBE}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+  <script src="../public/js/bootstrap.js"></script>
+</body>
+
+</html>

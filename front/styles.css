@@ -1,0 +1,41 @@
+input {
+    background: none;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom-color: black;
+    width: 100px;
+}
+
+strong{
+    margin-right: 20px
+}
+
+
+
+#table{
+    width:600px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#app{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#select{
+    margin-right: 30px;
+}
+
+#vcc{
+    margin-left: 10px
+}
+
+#ic{
+    margin-left:27px
+}
